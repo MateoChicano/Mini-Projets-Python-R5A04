@@ -1,11 +1,18 @@
+import math
 
-
-def check_heap(liste : list) -> bool :
-    taille = len(liste)
-    for i in range(taille):
-        pred_left = left
-        pred_right = right
-
-        left = 2 * i + 1 #element le plus a gauche de la branche gauche
-        right = 2 * i + 2 #element le plus a gauche de la branche droite
+def check_heap(L : list) -> bool :
+    # Verification Complétude
+    for i in range(len(L)):
+        if L[i] is None:
+            return False
+    # Verification Monotonie
+    for i in range(1, len(L)):
+        if(L[math.floor((i-1)/2)] > L[i]):
+            return False
     return True
+
+def heapify(L: list) -> list :
+        
+    
+    
+    return L
