@@ -27,7 +27,8 @@ print("**Test de heapify**")
 
 # test heapify sur liste nulle
 print(lib_tas.check_heap(lib_tas.heapify([]))) #True
-
+print(lib_tas.check_heap(lib_tas.heapify(gros_tas_ordre))) #True
+print(lib_tas.check_heap(lib_tas.heapify(gros_tas_trou))) #True
 # test heapify sur listes aléatoires
 for i in range(50):
     randlist = list(range(r.randint(1, 50)))
@@ -35,3 +36,13 @@ for i in range(50):
     randlist = lib_tas.heapify(randlist)
     if not(lib_tas.check_heap(randlist)):
         print('fail')
+
+print("**Test de heappop**")
+
+print(lib_tas.heappop(gros_tas))
+print(lib_tas.check_heap(lib_tas.heappop(gros_tas)))
+
+print("**Test de heappush**")
+
+print(lib_tas.heappush(gros_tas, 4))
+print(lib_tas.check_heap(lib_tas.heappush(gros_tas, 4)))
