@@ -33,9 +33,10 @@ def heapify(L: list) -> list :
     return L
 
 def heappop(L: list) -> list :
+    res = L[0]
     L = L[1:]
     heapify(L)
-    return(L)    
+    return(res)
     
 def heappush(L: list, a) -> list :
     L.append(a)

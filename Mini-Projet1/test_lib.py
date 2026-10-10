@@ -39,8 +39,7 @@ for i in range(50):
 
 print("**Test de heappop**")
 
-print(lib_tas.heappop(gros_tas))
-print(lib_tas.check_heap(lib_tas.heappop(gros_tas)))
+print(lib_tas.heappop(gros_tas)==1)
 
 print("**Test de heappush**")
 
